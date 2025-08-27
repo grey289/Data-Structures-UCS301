@@ -1,6 +1,16 @@
 #include <iostream>
 using namespace std;
-
+int finder(int *array, int size){
+    int s=0,l=size-1,m;
+   
+    while (s<=l){
+         m=(s+l)/2;
+    if (array[m]==m+1){s=m+1;} 
+    else {l=m-1;}
+        }
+  
+      return s+1;
+}
 int main()
 {
    int elements,i=0,j,temp;
@@ -10,28 +20,10 @@ int main()
     int arr[100];
     for (i=0;i<elements;i++){
         cout<<"enter the "<<i+1<<" element"<<endl;
-cin>> arr[i];
-    }
-    //sorting array 
-   
-    for (i=0;i<elements;i++){
-        for (j=0;j<elements-i-1;j++){
-            if (arr[j]>arr[j+1]){
-                temp=arr[j];
-                arr[j]=arr[j+1];
-                arr[j+1]=temp;
-            }
-        }
-    }
-    for (i=0;i<elements;i++){
-        cout<<arr[i]<<"\t";
+    cin>> arr[i];
     }
 
-    //sorted array of index till n can have distict numbers from 1 to n 
-    int missing =0,num;
-    //use binary search to find missing number & store it in num & if there is missing number then missing =1
-
-    if (missing==1) cout<<"the missing element is "<<num<<endl;
-    else cout<<"no missing numbers in array"<<endl;
+    int missing=finder(arr,elements);
+    cout<<"the missing element is "<<missing<<endl;
     return 0; 
 }

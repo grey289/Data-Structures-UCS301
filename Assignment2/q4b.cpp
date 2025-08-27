@@ -5,10 +5,7 @@
 using namespace std;
 string reverseString(string original) {
  
-    std::string reversed = original; // Make a copy to reverse
-
-    // Use the std::reverse algorithm from the <algorithm> header
-    // It takes iterators to the beginning and end of the range to reverse
+    string reversed = original; 
     std::reverse(reversed.begin(), reversed.end());
     return reversed;
 }

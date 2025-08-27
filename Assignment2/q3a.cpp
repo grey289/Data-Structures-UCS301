@@ -26,7 +26,6 @@ int main()
 cin>> arr[i];
     }
     int s=sizeof(arr)/sizeof(arr[0]);
-    //sorting array 
     int num=missing(arr,s);
     cout <<"for the array ;-"<<endl;
     for (i=0;i<elements;i++){
